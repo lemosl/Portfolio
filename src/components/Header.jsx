@@ -39,9 +39,11 @@ const Header = () => {
             ))}
 
           </ul>
-          <button onClick= {() => scrollToSection('#contact')} className='bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-base font-semibold transition-all'> 
-              Contact Me
-          </button>
+          <div className='hover:scale-105 transition-all ease-in-out flex justify-center items-center relative'>
+            <button onClick= {() => scrollToSection('#contact')} className='bg-primary text-white px-6 py-2.5 rounded-lg text-base font-semibold transition-all cursor-pointer'> 
+                Contact Me
+            </button>
+          </div>
         </nav>
             {/* Mobile Menu */}
             <button className='md:hidden text-white' onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -70,9 +72,9 @@ const Header = () => {
                       
                     </li>
                   ))}
-                  <li className='pt-6'>
+                  <li className='pt-6 '>
                     <button onClick={() => scrollToSection('#contact')}
-                      className='w-full bg-primary text-white py-4 rounded-xl text-lg font-bold'>
+                      className='w-full bg-primary text-white py-4 rounded-xl text-lg font-bold  '>
                         Contact Me
                       </button>
                   </li>

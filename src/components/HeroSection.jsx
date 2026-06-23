@@ -1,5 +1,6 @@
+import { Download } from 'lucide-react'
 import React from 'react'
-
+import luis from '../assets/luis.jpg'
 const HeroSection = () => {
   return (
     <section className='relative w-full' data-aos='zoom-in-up'>
@@ -13,10 +14,35 @@ const HeroSection = () => {
                     <div className='text-center lg:text-left'>
                         <h1 className='pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl'>
                             Hi dear, I´m {' '} 
-                            <span className='text-transparent bg-clip-text bg-linear-to-r from-primary to-cyan-200'>Luís!</span>
+                            <span className='text-transparent bg-clip-text bg-linear-to-r from-primary to-cyan-400'>Luís! </span>
+                            👋
                         </h1>
                     </div>
-                    <p  data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.</p>
+                    <p className='text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl'  data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.</p>
+                    <div className='flex items-center gap-3 pt-9 flex flex-col  sm:flex-row lg:mx-0'>
+                        <button className='px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center'>
+                            <span className='absolute inset-0 rounded-3xl group-hover:scale-105 origin-center transition-all ease-in-out bg-primary border-2 border-transparent'></span>
+                            <span className='relative flex items-center justify-center text-white'>Hire Me</span>
+                        </button>
+                        <button className='border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center'>
+                            <div className='hover:scale-105 transition-all ease-in-out flex justify-center items-center relative'>
+                                <div className='svg-container'><Download size={18} className='text-primary'/>
+                                    <div className='download-loader text-white hidden'></div>
+                                </div>
+                                <a href="/resume.pdf" className='pl-2 text-primary'>Download resume</a>
+                            </div>
+                        </button>
+        
+                    </div>
+                </div>
+                <div className='lg:h-full md:flex'>
+                    <div className='flex w-full h-96 min-h-96 lg:min-h-[none] lg:w-full items-center relative'>
+                        <div className='absolute z-0 top-1/2 -translate-y-1/2 w-5/6  right-0 h-[calc(80%+20px)] bg-linear-to-r opacity-25 from-[#0c64ac] to-primary blur-2xl'></div>
+                        <div className='absolute h-full z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-16 rounded-full shadow-lg border border-cyan-500'> 
+                            <img className='w-full h-full rounded-full' src={luis} width='400' height="auto" alt="Personal photo" />
+                        </div>                     
+                    </div>
+
                 </div>
              </div>
         </div>
